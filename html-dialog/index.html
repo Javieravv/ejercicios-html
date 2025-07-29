@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Ejercicio Dialog</title>
+   <link rel="stylesheet" href="stylesdialog.css">
+</head>
+
+<body>
+   <header>
+      <div class="main">
+         <h1>Ejercicio Dialog</h1>
+      </div>
+   </header>
+   <!-- Aquí irá el diálogo -->
+   <section class="section-dialog">
+      <div class="main">
+         <p>En este ejercico probamos un cuadro de diálogo</p>
+         <button id="btn-dialog" onclick="document.getElementById('mainDialog').showModal();">Abrir Diálogo</button>
+         <p id="resultDialog"></p>
+      </div>
+   </section>
+
+   <!-- Html del dialog -->
+   <dialog id="mainDialog">
+      <form method="dialog">
+         <header>
+            <h2>Título Diálogo</h2>
+            <button type="button" aria-label="close" onclick="document.getElementById('mainDialog').close();">X</button>
+         </header>
+         <section>
+            <p>¿Está segur de salir de la aplicación?</p>
+         </section>
+         <footer>
+            <button value="no">No</button>
+            <button value="Sí">Sí</button>
+         </footer>
+      </form>
+   </dialog>
+   <!-- Fin Html del dialog -->
+    <script type="module" src="maindialog.js"></script>
+</body>
+
+</html>

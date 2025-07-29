@@ -1,0 +1,143 @@
+/* Estilos para el diálogo
+ */
+
+:root {
+    --bgcolormain: rgba(211, 211, 211, 0.2);
+    --bgheader: black;
+    --colorfontheader: white;
+    --bgsectiondialog: rgba(227, 226, 255, 0.238);
+    --colorsectiondialog: black;
+    --bgdialog: rgba(106, 106, 113, 0.884);
+    --colordialog: black;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+body {
+    background-color: var(--bgcolormain);
+    min-height: 100vh;
+    /* border: 2px solid red; */
+}
+
+h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem)
+}
+
+header {
+    min-height: 55px;
+    background-color: var(--bgheader);
+    color: var(--colorfontheader);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    width: min(900px, 90%);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-dialog {
+    min-height: 300px;
+    background-color: var(--bgsectiondialog);
+    color: var(--colorsectiondialog);
+}
+
+.section-dialog .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 2;
+}
+
+.section-dialog button {
+    background-color: var(--colorsectiondialog);
+    color: var(--colorfontheader);
+    min-width: 250px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}
+
+/* Css para el diálogo */
+dialog {
+    min-height: 200px;
+    width: min(400px, 80%);
+    margin: auto auto;
+    /* top: calc(50% - 125px); */
+    background-color: var(--bgdialog);
+    border-radius: 8px;
+}
+
+dialog:open {
+    display: flex;
+    flex-direction: column;
+}
+
+dialog header {
+    height: 30px;
+    background-color: var(--bgheader);
+    color: var(--colorfontheader);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+dialog header button {
+    cursor: pointer
+}
+
+dialog section {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+dialog footer {
+    min-height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px 15px;
+
+    button {
+        /* width: 95%; */
+        padding: 5px 5px;
+        border: none;
+        border-radius: 4px;
+        color: var(--colorfontheader);
+        flex: 1;
+        /* background-color: var(--bgheader); */
+
+        &:first-child {
+            background-color: red;
+        }
+
+        &:last-child {
+            background-color: green;
+        }
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+        }
+    }
+}
